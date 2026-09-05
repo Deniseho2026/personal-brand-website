@@ -24,14 +24,14 @@ export const navigation = [
 ];
 
 export const siteCopy = {
-  eyebrow: { en: "Psychology · Art · Words · Human Connection", zh: "心理學 · 藝術 · 文字 · 人與人的連結" },
+  eyebrow: { en: "Psychology · Creativity · Art · Translation · Meaning", zh: "心理學 · 創意 · 藝術 · 翻譯 · 意義" },
   hero: {
     en: "Exploring the inner life through psychology, art and words.",
     zh: "從心理學、藝術與文字，探索人的內在世界。",
   },
   heroNote: {
-    en: "Counselling background · Expressive Arts practitioner · Watercolour teacher · Writer",
-    zh: "心理輔導背景 · 表達藝術工作者 · 水彩導師 · 寫作者",
+    en: "Counsellor · Expressive Arts practitioner · Watercolour teacher · Writer",
+    zh: "輔導員 · 表達藝術工作者 · 水彩導師 · 寫作者",
   },
   explore: { en: "Explore my work", zh: "探索我的工作" },
   contact: { en: "Get in touch", zh: "聯絡我" },

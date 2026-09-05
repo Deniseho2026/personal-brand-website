@@ -18,3 +18,6 @@
 - [x] Clarify the owner authentication handoff so the Content Studio clearly explains whether the current browser session is signed in.
 - [x] Improve the empty Content Studio library state with explicit first-use guidance and content-source explanation.
 - [x] Validate that non-owner sessions remain blocked and owner sessions can load database content.
+- [x] Update the homepage hero descriptor to “Psychology · Creativity · Art · Translation · Meaning”.
+- [x] Update the homepage professional line to “Counsellor · Expressive Arts practitioner · Watercolour teacher · Writer”.
+- [x] Verify the copy visually and save a new checkpoint.
