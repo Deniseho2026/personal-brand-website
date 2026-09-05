@@ -12,3 +12,6 @@
 - [x] Write or update Vitest coverage for bilingual content validation and public enquiry handling.
 - [x] Run type checking and automated tests; verify the main views at desktop and mobile widths; fix any identified issues.
 - [x] Prepare the content editing guide and pre-publication review checklist for Denise.
+- [x] Fix published `/studio` owner authentication so the owner account is recognized on the custom domain.
+- [x] Verify the protected `/studio` route and keep non-owner access blocked after the fix.
+- [x] Create a new checkpoint for the published owner-access fix.

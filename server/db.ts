@@ -26,6 +26,11 @@ export async function getDb() {
   return _db;
 }
 
+export function resolveUserRole(openId: string, existingRole?: "user" | "admin"): "user" | "admin" {
+  if (openId === ENV.ownerOpenId || existingRole === "admin") return "admin";
+  return "user";
+}
+
 export async function upsertUser(user: InsertUser): Promise<void> {
   if (!user.openId) throw new Error("User openId is required for upsert");
 
@@ -42,7 +47,12 @@ export async function upsertUser(user: InsertUser): Promise<void> {
     }
   }
 
-  values.role = user.role ?? (user.openId === ENV.ownerOpenId ? "admin" : "user");
+  const existing = await db
+    .select({ role: users.role })
+    .from(users)
+    .where(eq(users.openId, user.openId))
+    .limit(1);
+  values.role = user.role ?? resolveUserRole(user.openId, existing[0]?.role);
   updateSet.role = values.role;
   await db.insert(users).values(values).onDuplicateKeyUpdate({ set: updateSet });
 }
