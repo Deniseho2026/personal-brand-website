@@ -1,0 +1,14 @@
+# Project TODO
+
+- [x] Establish the Quiet Atelier visual system with bilingual typography, warm paper palette, and responsive global styling.
+- [x] Add a bilingual content model for biography, services, writing, artworks, projects, collections, contact details, and professional notices.
+- [x] Build reusable public navigation, footer, language switch, editorial labels, and image presentation primitives.
+- [x] Build the Home page with hero, visual journey, interconnected practice areas, featured writing/art/project previews, and quiet closing invitation.
+- [x] Build the About Me and My Work pages as readable bilingual narratives that accurately describe Denise’s professional background and integrated practice.
+- [x] Build bilingual Writing, Art, Projects, and Collections views with readable article, gallery, and project metadata structures.
+- [x] Build bilingual Services and Contact pages with clear Hong Kong-only service notices, consent control, privacy note, and enquiry form feedback.
+- [x] Add basic public content and contact-enquiry database schema, typed procedures, and an owner-only editing workflow for future CMS use.
+- [x] Add SEO metadata, social metadata, descriptive image alt text, semantic landmarks, keyboard-visible focus states, and clean URLs.
+- [x] Write or update Vitest coverage for bilingual content validation and public enquiry handling.
+- [x] Run type checking and automated tests; verify the main views at desktop and mobile widths; fix any identified issues.
+- [x] Prepare the content editing guide and pre-publication review checklist for Denise.

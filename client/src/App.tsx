@@ -5,14 +5,30 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import About from "./pages/About";
+import MyWork from "./pages/MyWork";
+import Writing from "./pages/Writing";
+import ArticleDetail from "./pages/ArticleDetail";
+import Art from "./pages/Art";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import StudioCMS from "./pages/StudioCMS";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path={"/about"} component={About} />
+      <Route path={"/work"} component={MyWork} />
+      <Route path={"/writing/:slug"} component={ArticleDetail} />
+      <Route path={"/writing"} component={Writing} />
+      <Route path={"/art"} component={Art} />
+      <Route path={"/services"} component={Services} />
+      <Route path={"/contact"} component={Contact} />
+      <Route path={"/studio"} component={StudioCMS} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -30,10 +46,12 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
