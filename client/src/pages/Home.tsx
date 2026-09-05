@@ -1,6 +1,7 @@
 import { PageFrame, SectionHeading } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { assetUrls, initialArticles, initialArtworks, journey, projects, siteCopy, t, workAreas } from "@/content/siteContent";
+import { mapArticlePreview, mapJourneyRecord, mapWorkRecord } from "@/content/publicContent";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { trpc } from "@/lib/trpc";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
@@ -11,23 +12,23 @@ export default function Home() {
   usePageMetadata(locale === "en" ? "Psychology, Art & Words" : "心理學、藝術與文字", t(siteCopy.hero, locale), locale);
   const journeyContent = trpc.content.listPublished.useQuery({ kind: "journey" });
   const workRecordContent = trpc.content.listPublished.useQuery({ kind: "work-record" });
+  const articleContent = trpc.content.listPublished.useQuery({ kind: "article" });
+  const artworkContent = trpc.content.listPublished.useQuery({ kind: "artwork" });
+  const projectContent = trpc.content.listPublished.useQuery({ kind: "project" });
+  const featuredArticle = articleContent.data?.[0]
+    ? mapArticlePreview(articleContent.data[0], { image: initialArticles[0].image, category: initialArticles[0].category, title: initialArticles[0].title, excerpt: initialArticles[0].excerpt, href: `/writing/${initialArticles[0].slug}` })
+    : { image: initialArticles[0].image, category: initialArticles[0].category, title: initialArticles[0].title, excerpt: initialArticles[0].excerpt, href: `/writing/${initialArticles[0].slug}` };
+  const featuredArtwork = artworkContent.data?.[0]
+    ? { image: artworkContent.data[0].imageUrl || initialArtworks[0].image, medium: { en: artworkContent.data[0].mediumEn || "Artwork", zh: artworkContent.data[0].mediumZh || "作品" }, title: { en: artworkContent.data[0].titleEn, zh: artworkContent.data[0].titleZh }, year: artworkContent.data[0].year || "", href: "/art" }
+    : { image: initialArtworks[0].image, medium: initialArtworks[0].medium, title: initialArtworks[0].title, year: initialArtworks[0].year, href: "/art" };
+  const featuredProject = projectContent.data?.[0]
+    ? { type: { en: projectContent.data[0].categoryEn || "Project", zh: projectContent.data[0].categoryZh || "項目" }, title: { en: projectContent.data[0].titleEn, zh: projectContent.data[0].titleZh }, description: { en: projectContent.data[0].excerptEn || projectContent.data[0].bodyEn || "", zh: projectContent.data[0].excerptZh || projectContent.data[0].bodyZh || "" }, href: "/art" }
+    : { type: projects[0].type, title: projects[0].title, description: projects[0].description, href: "/art" };
   const journeyItems = journeyContent.data?.length
-    ? journeyContent.data.map((item, index) => ({
-        year: item.year || String(index + 1).padStart(2, "0"),
-        title: { en: item.titleEn, zh: item.titleZh },
-        body: { en: item.excerptEn || item.bodyEn || "", zh: item.excerptZh || item.bodyZh || "" },
-        image: item.imageUrl || "",
-      }))
+    ? journeyContent.data.map(mapJourneyRecord)
     : journey.map(item => ({ ...item, image: "" }));
   const workItems = workRecordContent.data?.length
-    ? workRecordContent.data.map((item, index) => ({
-        key: item.slug,
-        index: String(index + 1).padStart(2, "0"),
-        title: { en: item.titleEn, zh: item.titleZh },
-        description: { en: item.excerptEn || item.bodyEn || "", zh: item.excerptZh || item.bodyZh || "" },
-        href: item.linkUrl || "/work",
-        image: item.imageUrl || "",
-      }))
+    ? workRecordContent.data.map(mapWorkRecord)
     : workAreas.map(area => ({ ...area, image: "" }));
 
   return (
@@ -67,10 +68,10 @@ export default function Home() {
       <section className="page-section studio-highlights">
         <div className="highlight-head"><SectionHeading eyebrow={locale === "en" ? "From the studio" : "來自工作室"} title={locale === "en" ? "Notes, images, and ongoing work." : "文字、圖像，以及仍在進行的工作。"} /><Link href="/writing" className="text-link">{t(siteCopy.viewAll, locale)} <ArrowRight size={14} /></Link></div>
         <div className="editorial-grid">
-          <article className="writing-feature"><img src={initialArticles[0].image} alt={locale === "en" ? "An open notebook in a quiet studio" : "安靜工作室裡的打開筆記本"} /><div><p className="content-label">{t(initialArticles[0].category, locale)}</p><h3>{t(initialArticles[0].title, locale)}</h3><p>{t(initialArticles[0].excerpt, locale)}</p><Link href="/writing" className="text-link">{t(siteCopy.readMore, locale)} <ArrowRight size={14} /></Link></div></article>
-          <article className="art-feature"><img src={initialArtworks[0].image} alt={locale === "en" ? "Watercolour landscape study" : "水彩風景習作"} /><div><p className="content-label">{t(initialArtworks[0].medium, locale)}{locale === "en" ? ` · ${initialArtworks[0].year}` : ""}</p><h3>{t(initialArtworks[0].title, locale)}</h3><Link href="/art" className="text-link">{locale === "en" ? "Visit the gallery" : "前往作品集"} <ArrowRight size={14} /></Link></div></article>
+          <article className="writing-feature"><img src={featuredArticle.image} alt={t(featuredArticle.title, locale)} /><div><p className="content-label">{t(featuredArticle.category, locale)}</p><h3>{t(featuredArticle.title, locale)}</h3><p>{t(featuredArticle.excerpt, locale)}</p><Link href={featuredArticle.href} className="text-link">{t(siteCopy.readMore, locale)} <ArrowRight size={14} /></Link></div></article>
+          <article className="art-feature"><img src={featuredArtwork.image} alt={t(featuredArtwork.title, locale)} /><div><p className="content-label">{t(featuredArtwork.medium, locale)}{locale === "en" && featuredArtwork.year ? ` · ${featuredArtwork.year}` : ""}</p><h3>{t(featuredArtwork.title, locale)}</h3><Link href={featuredArtwork.href} className="text-link">{locale === "en" ? "Visit the gallery" : "前往作品集"} <ArrowRight size={14} /></Link></div></article>
         </div>
-        <Link href="/art" className="home-project-preview"><p className="content-label">{t(projects[0].type, locale)} · 01</p><div><h3>{t(projects[0].title, locale)}</h3><p>{t(projects[0].description, locale)}</p></div><span>{locale === "en" ? "Projects & collections" : "項目與作品系列"}<ArrowRight size={16} /></span></Link>
+        <Link href={featuredProject.href} className="home-project-preview"><p className="content-label">{t(featuredProject.type, locale)} · 01</p><div><h3>{t(featuredProject.title, locale)}</h3><p>{t(featuredProject.description, locale)}</p></div><span>{locale === "en" ? "Projects & collections" : "項目與作品系列"}<ArrowRight size={16} /></span></Link>
       </section>
 
       <section className="closing-section"><p className="eyebrow"><span />{locale === "en" ? "A quiet invitation" : "一個安靜的邀請"}</p><h2 style={{ fontSize: "25px", fontWeight: 300, textAlign: "left" }}>{t(siteCopy.closing, locale)}</h2><Link href="/contact" className="button-primary">{t(siteCopy.contact, locale)} <ArrowRight size={15} /></Link></section>

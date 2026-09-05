@@ -32,22 +32,35 @@
 - [x] Set the homepage closing-invitation text to 25px, weight 300, and left alignment without overriding unrelated child styles.
 - [x] Verify the closing section responsively and save a new checkpoint.
 - [x] Document which Content Studio sections map to each public website page and section.
-- [ ] Fix the Content Studio add-content flow for bilingual text and image uploads.
-- [ ] Validate that newly added content saves, appears in the library, and renders on its intended public page.
-- [ ] Publish the Content Studio mapping and add-flow fix in a new checkpoint.
-- [ ] Explain and improve the draft-to-published workflow so users know drafts stay off the public site.
-- [ ] Verify the saved `test-note-1` article and uploaded image render after publication on `/writing` and `/writing/test-note-1`.
-- [ ] Publish the verified publication-flow update in a new checkpoint.
+- [x] Fix the Content Studio add-content flow for bilingual text and image uploads.
+- [x] Validate that newly added content saves, appears in the library, and renders on its intended public page.
+- [x] Publish the Content Studio mapping and add-flow fix in a new checkpoint.
+- [x] Explain and improve the draft-to-published workflow so users know drafts stay off the public site.
+- [x] Verify the saved published article with an uploaded image renders on `/writing` and its detail page (`/writing/test`).
+- [x] Publish the verified publication-flow update in a new checkpoint.
 - [x] Add an editable bilingual homepage journey content model for Writing, Counselling, Expressive arts, and Painting.
 - [x] Add an editable bilingual homepage ways-of-working content model for work records with optional images and links.
 - [x] Add owner-only Content Studio controls for homepage section, ordering, draft/published status, and image attachment.
 - [x] Connect published homepage journey and ways-of-working items to the public homepage with starter-content fallback.
-- [ ] Validate create, edit, publish, bilingual rendering, image attachment, ordering, and responsive presentation.
+- [ ] Validate create, edit, publish, bilingual rendering, image attachment, ordering, and responsive presentation with a Journey story created by the owner.
 - [x] Publish the homepage section-management extension and update the content editing guidance.
-- [ ] Ensure the published Content Studio exposes Journey story and Work record in the Type selector.
-- [ ] Verify the deployed Studio selector and homepage section rendering after publishing.
-- [ ] Save a checkpoint for the deployed homepage section-management feature.
+- [ ] Ensure the newly published Content Studio exposes Journey story and Work record in the Type selector after owner sign-in.
+- [ ] Verify the deployed Studio selector and homepage section rendering after owner sign-in.
+- [x] Save a checkpoint for the deployed homepage section-management feature.
 - [x] Add an optional safe link field for work-record items and use it on homepage cards with a /work fallback.
-- [ ] Validate work-record link storage and homepage navigation before the final checkpoint.
+- [ ] Validate work-record link storage and homepage navigation with an owner-created record before the final checkpoint.
 - [x] Change the About-page biography wording to say Denise spent sixteen years in banking, removing the UBS reference from this paragraph.
 - [x] Verify the About-page copy visually and save a new checkpoint.
+- [x] Audit the formal article record, publication status, slug, image URL, and public article query.
+- [x] Fix managed image persistence and public article image rendering for newly published articles.
+- [x] Redesign Content Studio mapping so every field clearly identifies its public page and visible section.
+- [x] Make Connected journey a first-class editable section with add, edit, image, display order, draft/published, and public rendering behavior.
+- [x] Add end-to-end regression coverage for article publication, image attachment, Studio mapping, and Connected journey rendering.
+- [ ] Validate the repaired workflow with real owner-created content, then publish a new stable checkpoint.
+- [ ] Preserve the current full-stack checkpoint before static conversion.
+- [ ] Remove the public `/studio` route, owner login surface, Content Studio code paths, and database-backed public queries from the static site.
+- [ ] Keep the current public bilingual pages and freeze their content into a static data source with a clear future CMS boundary.
+- [ ] Replace database-backed contact submission with a third-party email form endpoint placeholder and document the required endpoint configuration.
+- [ ] Add GitHub Pages build/deploy workflow and Cloudflare Pages deployment configuration.
+- [ ] Verify direct navigation, responsive public pages, article paths, contact form behavior, and static build output.
+- [ ] Publish the static conversion checkpoint and provide GitHub Pages / Cloudflare Pages setup instructions.

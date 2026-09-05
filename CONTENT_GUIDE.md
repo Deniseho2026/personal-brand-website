@@ -86,3 +86,9 @@ A Work record can also include an **Optional link**. Use a site path such as `/w
 | Work record | Home → Ways of working | A record of work with people, groups, organisations, or communities. |
 
 The existing **Core page copy** panel remains for the About page biography and Services descriptions. It does not edit the homepage journey cards or ways-of-working cards.
+
+## If a Formal Article Appears in the Wrong Section
+
+The public destination is controlled by the **Public destination** selector, not by the title or image. A complete article must use **Writing article / 文字文章**. If an article has been saved as **Ways of working / 工作方式**, it will appear on the homepage Ways of working section instead of the Writing page, even if it has a long body and an image.
+
+To correct an existing item, select it in **Content library**, change **Public destination** to **Writing article / 文字文章**, check the article slug, confirm both short introductions and full bodies, then set **Published** and save. The public destinations are shown above the editor and in the **Where content appears** table before you save.
