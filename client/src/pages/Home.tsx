@@ -52,7 +52,7 @@ export default function Home() {
         <Link href="/art" className="home-project-preview"><p className="content-label">{t(projects[0].type, locale)} · 01</p><div><h3>{t(projects[0].title, locale)}</h3><p>{t(projects[0].description, locale)}</p></div><span>{locale === "en" ? "Projects & collections" : "項目與作品系列"}<ArrowRight size={16} /></span></Link>
       </section>
 
-      <section className="closing-section"><p className="eyebrow"><span />{locale === "en" ? "A quiet invitation" : "一個安靜的邀請"}</p><h2>{t(siteCopy.closing, locale)}</h2><Link href="/contact" className="button-primary">{t(siteCopy.contact, locale)} <ArrowRight size={15} /></Link></section>
+      <section className="closing-section"><p className="eyebrow"><span />{locale === "en" ? "A quiet invitation" : "一個安靜的邀請"}</p><h2 style={{ fontSize: "25px", fontWeight: 300, textAlign: "left" }}>{t(siteCopy.closing, locale)}</h2><Link href="/contact" className="button-primary">{t(siteCopy.contact, locale)} <ArrowRight size={15} /></Link></section>
     </PageFrame>
   );
 }

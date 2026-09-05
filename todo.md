@@ -29,3 +29,5 @@
 - [x] Remove the Traditional Chinese artwork title from the homepage card.
 - [x] Change the Traditional Chinese artwork metadata to “紙本水彩 ”.
 - [x] Verify the homepage edits visually and save a new checkpoint.
+- [x] Set the homepage closing-invitation text to 25px, weight 300, and left alignment without overriding unrelated child styles.
+- [x] Verify the closing section responsively and save a new checkpoint.
