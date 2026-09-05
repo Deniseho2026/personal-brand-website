@@ -30,7 +30,7 @@ export default function Home() {
 
       <section className="page-section journey-section">
         <div className="journey-intro"><SectionHeading eyebrow={locale === "en" ? "A connected journey" : "一段相連的旅程"} title={locale === "en" ? "There is a thread running through the work." : "不同的經驗，原來有一條共同的線。"} /></div>
-        <p className="journey-lead">{locale === "en" ? "My professional journey began in banking, but over time I found myself drawn towards a different kind of work — understanding people, exploring the inner life, and finding ways to express what words alone cannot always say." : "我的職涯從銀行業開始；但隨著時間過去，我逐漸走向另一種工作：理解人、探索內在世界，以及尋找一些方法，讓未必能以言語說清的感受有所表達。"}</p>
+        <p className="journey-lead">{locale === "en" ? "My professional journey began in banking. After 16 years in the field, I found myself drawn towards a different kind of work — understanding people, exploring the inner life, and finding ways to express what words alone cannot always say." : "我的職涯從銀行業開始；在這個領域工作了16年後，我逐漸走向另一種工作：理解人、探索內在世界，以及尋找一些方法，讓未必能以言語說清的感受有所表達。"}</p>
         <div className="journey-list">
           {journey.map(item => <article className="journey-item" key={item.year}><span>{item.year}</span><h3>{t(item.title, locale)}</h3><p>{t(item.body, locale)}</p></article>)}
         </div>

@@ -21,3 +21,7 @@
 - [x] Update the homepage hero descriptor to “Psychology · Creativity · Art · Translation · Meaning”.
 - [x] Update the homepage professional line to “Counsellor · Expressive Arts practitioner · Watercolour teacher · Writer”.
 - [x] Verify the copy visually and save a new checkpoint.
+- [x] Change the homepage image caption to “A quiet space for reflection”.
+- [x] Add “After 16 years in the field” to the homepage journey introduction.
+- [x] Update the first journey label and description, and rename the final journey label to “Painting”.
+- [x] Verify the homepage copy visually and save a new checkpoint.
