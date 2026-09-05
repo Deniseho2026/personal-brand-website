@@ -31,3 +31,21 @@
 - [x] Verify the homepage edits visually and save a new checkpoint.
 - [x] Set the homepage closing-invitation text to 25px, weight 300, and left alignment without overriding unrelated child styles.
 - [x] Verify the closing section responsively and save a new checkpoint.
+- [x] Document which Content Studio sections map to each public website page and section.
+- [ ] Fix the Content Studio add-content flow for bilingual text and image uploads.
+- [ ] Validate that newly added content saves, appears in the library, and renders on its intended public page.
+- [ ] Publish the Content Studio mapping and add-flow fix in a new checkpoint.
+- [ ] Explain and improve the draft-to-published workflow so users know drafts stay off the public site.
+- [ ] Verify the saved `test-note-1` article and uploaded image render after publication on `/writing` and `/writing/test-note-1`.
+- [ ] Publish the verified publication-flow update in a new checkpoint.
+- [x] Add an editable bilingual homepage journey content model for Writing, Counselling, Expressive arts, and Painting.
+- [x] Add an editable bilingual homepage ways-of-working content model for work records with optional images and links.
+- [x] Add owner-only Content Studio controls for homepage section, ordering, draft/published status, and image attachment.
+- [x] Connect published homepage journey and ways-of-working items to the public homepage with starter-content fallback.
+- [ ] Validate create, edit, publish, bilingual rendering, image attachment, ordering, and responsive presentation.
+- [x] Publish the homepage section-management extension and update the content editing guidance.
+- [ ] Ensure the published Content Studio exposes Journey story and Work record in the Type selector.
+- [ ] Verify the deployed Studio selector and homepage section rendering after publishing.
+- [ ] Save a checkpoint for the deployed homepage section-management feature.
+- [x] Add an optional safe link field for work-record items and use it on homepage cards with a /work fallback.
+- [ ] Validate work-record link storage and homepage navigation before the final checkpoint.

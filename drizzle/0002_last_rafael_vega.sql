@@ -1,0 +1,1 @@
+ALTER TABLE `contentItems` MODIFY COLUMN `kind` enum('article','artwork','project','collection','journey','work-record') NOT NULL;

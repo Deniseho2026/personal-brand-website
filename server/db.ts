@@ -1,4 +1,4 @@
-import { and, desc, eq } from "drizzle-orm";
+import { and, asc, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import {
   contactEnquiries,
@@ -74,14 +74,14 @@ export async function listPublishedContent(kind?: ContentKind) {
       .select()
       .from(contentItems)
       .where(and(eq(contentItems.status, "published"), eq(contentItems.kind, kind)))
-      .orderBy(desc(contentItems.featured), desc(contentItems.publishedAt), desc(contentItems.createdAt));
+      .orderBy(asc(contentItems.sortOrder), desc(contentItems.featured), desc(contentItems.publishedAt), desc(contentItems.createdAt));
   }
 
   return db
     .select()
     .from(contentItems)
     .where(eq(contentItems.status, "published"))
-    .orderBy(desc(contentItems.featured), desc(contentItems.publishedAt), desc(contentItems.createdAt));
+    .orderBy(asc(contentItems.sortOrder), desc(contentItems.featured), desc(contentItems.publishedAt), desc(contentItems.createdAt));
 }
 
 export async function getPublishedContentBySlug(slug: string) {

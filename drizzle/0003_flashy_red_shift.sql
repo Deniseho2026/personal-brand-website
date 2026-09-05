@@ -1,0 +1,1 @@
+ALTER TABLE `contentItems` ADD `linkUrl` varchar(1024);

@@ -54,3 +54,35 @@ The form includes a privacy-friendly notice. It should not be presented as an em
 Before publishing, replace every placeholder that needs a personal image, proofread English and Traditional Chinese content side by side, test the language switch, and check all service descriptions and Hong Kong-only labels. Submit a test contact enquiry and confirm that it appears in the Content Studio. Finally, review the Facebook and Instagram links, confirm the phone number and email address, and test the website on a phone and a desktop browser.
 
 When the content is ready, create a website checkpoint and then use the **Publish** control in the management interface. A custom domain can be connected later from the domain settings.
+
+## Homepage Journey and Ways of Working
+
+The Content Studio now includes two additional content types for the homepage. Choose **Journey story** for the personal thread running through Denise’s work: writing, counselling, expressive arts practice, and painting. Published Journey stories appear in **Home → A connected journey**. Use the English and Traditional Chinese title fields for the card heading, the short-introduction fields for the visible card text, and the optional image upload for a small supporting image.
+
+Choose **Work record** for records of how Denise works with people, groups, organisations, universities, communities, or other partners. Published Work records appear in **Home → Ways of working**. Their short introductions become the card descriptions and their optional images appear above the card text.
+
+Use **Display order** to control the sequence in each homepage section. Lower numbers appear first. A draft is stored in Content Studio but stays off the public homepage. Change **Publishing status** to **Published** and save again when the item is ready. If no published Journey story or Work record exists, the original starter cards remain visible as a fallback.
+
+| Content Studio type | Public destination | Recommended content |
+|---|---|---|
+| Journey story | Home → A connected journey | A personal story about writing, counselling, expressive arts, or painting. |
+| Work record | Home → Ways of working | A record of work with people, groups, organisations, or communities. |
+
+The existing **Core page copy** panel remains for the About page biography and Services descriptions. It does not edit the homepage journey cards or ways-of-working cards.
+
+## Homepage Journey and Ways of Working
+
+The Content Studio now includes two additional content types for the homepage. Choose **Journey story** for the personal thread running through Denise’s work: writing, counselling, expressive arts practice, and painting. Published Journey stories appear in **Home → A connected journey**. Use the English and Traditional Chinese title fields for the card heading, the short-introduction fields for the visible card text, and the optional image upload for a small supporting image.
+
+Choose **Work record** for records of how Denise works with people, groups, organisations, universities, communities, or other partners. Published Work records appear in **Home → Ways of working**. Their short introductions become the card descriptions and their optional images appear above the card text.
+
+Use **Display order** to control the sequence in each homepage section. Lower numbers appear first. A draft is stored in Content Studio but stays off the public homepage. Change **Publishing status** to **Published** and save again when the item is ready. If no published Journey story or Work record exists, the original starter cards remain visible as a fallback.
+
+A Work record can also include an **Optional link**. Use a site path such as `/work` for an internal destination, or an `https://` URL for an external resource. External links open in a new tab. If no link is provided, the card safely falls back to `/work`.
+
+| Content Studio type | Public destination | Recommended content |
+|---|---|---|
+| Journey story | Home → A connected journey | A personal story about writing, counselling, expressive arts, or painting. |
+| Work record | Home → Ways of working | A record of work with people, groups, organisations, or communities. |
+
+The existing **Core page copy** panel remains for the About page biography and Services descriptions. It does not edit the homepage journey cards or ways-of-working cards.

@@ -2,12 +2,33 @@ import { PageFrame, SectionHeading } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { assetUrls, initialArticles, initialArtworks, journey, projects, siteCopy, t, workAreas } from "@/content/siteContent";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
+import { trpc } from "@/lib/trpc";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
   const { locale } = useLanguage();
   usePageMetadata(locale === "en" ? "Psychology, Art & Words" : "心理學、藝術與文字", t(siteCopy.hero, locale), locale);
+  const journeyContent = trpc.content.listPublished.useQuery({ kind: "journey" });
+  const workRecordContent = trpc.content.listPublished.useQuery({ kind: "work-record" });
+  const journeyItems = journeyContent.data?.length
+    ? journeyContent.data.map((item, index) => ({
+        year: item.year || String(index + 1).padStart(2, "0"),
+        title: { en: item.titleEn, zh: item.titleZh },
+        body: { en: item.excerptEn || item.bodyEn || "", zh: item.excerptZh || item.bodyZh || "" },
+        image: item.imageUrl || "",
+      }))
+    : journey.map(item => ({ ...item, image: "" }));
+  const workItems = workRecordContent.data?.length
+    ? workRecordContent.data.map((item, index) => ({
+        key: item.slug,
+        index: String(index + 1).padStart(2, "0"),
+        title: { en: item.titleEn, zh: item.titleZh },
+        description: { en: item.excerptEn || item.bodyEn || "", zh: item.excerptZh || item.bodyZh || "" },
+        href: item.linkUrl || "/work",
+        image: item.imageUrl || "",
+      }))
+    : workAreas.map(area => ({ ...area, image: "" }));
 
   return (
     <PageFrame>
@@ -32,14 +53,14 @@ export default function Home() {
         <div className="journey-intro"><SectionHeading eyebrow={locale === "en" ? "A connected journey" : "一段相連的旅程"} title={locale === "en" ? "There is a thread running through the work." : "不同的經驗，原來有一條共同的線。"} /></div>
         <p className="journey-lead">{locale === "en" ? "My professional journey began in banking. After 16 years in the field, I found myself drawn towards a different kind of work — understanding people, exploring the inner life, and finding ways to express what words alone cannot always say." : "我的職涯從銀行業開始；在這個領域工作了16年後，我逐漸走向另一種工作：理解人、探索內在世界，以及尋找一些方法，讓未必能以言語說清的感受有所表達。"}</p>
         <div className="journey-list">
-          {journey.map(item => <article className="journey-item" key={item.year}><span>{item.year}</span><h3>{t(item.title, locale)}</h3><p>{t(item.body, locale)}</p></article>)}
+          {journeyItems.map(item => <article className="journey-item" key={item.year + item.title.en}>{item.image ? <img className="journey-item-image" src={item.image} alt={t(item.title, locale)} /> : null}<span>{item.year}</span><h3>{t(item.title, locale)}</h3><p>{t(item.body, locale)}</p></article>)}
         </div>
       </section>
 
       <section className="page-section is-paper door-section">
         <SectionHeading eyebrow={locale === "en" ? "Ways of working" : "工作方式"} title={locale === "en" ? "Four doors into the same larger world." : "四扇門，通向同一個更大的世界。"} body={locale === "en" ? "These are not separate businesses. They are different expressions of the same underlying interest: understanding human experience and creating places to explore, express, and connect." : "這些並不是互不相關的工作，而是同一個關懷的不同表達：理解人的經驗，並創造可以探索、表達與連結的空間。"} />
         <div className="door-grid">
-          {workAreas.map(area => <Link key={area.key} href={area.href} className="door-card"><span>{area.index}</span><h3>{t(area.title, locale)}</h3><p>{t(area.description, locale)}</p><ArrowRight size={18} /></Link>)}
+          {workItems.map(area => { const card = <>{area.image ? <img className="door-card-image" src={area.image} alt={t(area.title, locale)} /> : null}<span>{area.index}</span><h3>{t(area.title, locale)}</h3><p>{t(area.description, locale)}</p><ArrowRight size={18} /></>; return area.href.startsWith("http") ? <a key={area.key} href={area.href} target="_blank" rel="noreferrer" className="door-card">{card}</a> : <Link key={area.key} href={area.href} className="door-card">{card}</Link>; })}
         </div>
       </section>
 

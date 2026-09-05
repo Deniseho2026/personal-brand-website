@@ -30,6 +30,7 @@ export const contentInputSchema = z.object({
   categoryZh: z.string().max(120).nullable().optional(),
   tags: z.string().max(500).nullable().optional(),
   imageUrl: z.union([z.string().url(), z.string().regex(/^\/manus-storage\//)]).nullable().optional(),
+  linkUrl: z.string().max(1024).trim().refine(value => value.startsWith("/") ? !value.startsWith("//") : /^https?:\/\//i.test(value), "Use a site path or an http(s) URL.").nullable().optional(),
   year: z.string().max(20).nullable().optional(),
   mediumEn: z.string().max(240).nullable().optional(),
   mediumZh: z.string().max(240).nullable().optional(),

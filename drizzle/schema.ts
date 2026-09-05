@@ -30,7 +30,7 @@ export const users = mysqlTable("users", {
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
 });
 
-export const contentKinds = ["article", "artwork", "project", "collection"] as const;
+export const contentKinds = ["article", "artwork", "project", "collection", "journey", "work-record"] as const;
 export type ContentKind = (typeof contentKinds)[number];
 
 export const contentItems = mysqlTable("contentItems", {
@@ -47,6 +47,7 @@ export const contentItems = mysqlTable("contentItems", {
   categoryZh: varchar("categoryZh", { length: 120 }),
   tags: text("tags"),
   imageUrl: varchar("imageUrl", { length: 1024 }),
+  linkUrl: varchar("linkUrl", { length: 1024 }),
   year: varchar("year", { length: 20 }),
   mediumEn: varchar("mediumEn", { length: 240 }),
   mediumZh: varchar("mediumZh", { length: 240 }),

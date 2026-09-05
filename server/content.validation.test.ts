@@ -21,6 +21,25 @@ describe("content validation", () => {
     expect(item.status).toBe("published");
   });
 
+  it("accepts homepage journey and work-record items", () => {
+    for (const kind of ["journey", "work-record"] as const) {
+      const item = contentInputSchema.parse({
+        kind,
+        slug: `${kind}-one`,
+        titleEn: "A practice note",
+        titleZh: "一則實踐筆記",
+        excerptEn: "A short description.",
+        excerptZh: "簡短介紹。",
+        imageUrl: "/manus-storage/denise-media/example.jpg",
+        linkUrl: kind === "work-record" ? "/work" : undefined,
+        status: "published",
+        sortOrder: 1,
+      });
+      expect(item.kind).toBe(kind);
+    }
+    expect(() => contentInputSchema.parse({ kind: "work-record", slug: "unsafe-link", titleEn: "Unsafe", titleZh: "不安全", linkUrl: "javascript:alert(1)" })).toThrow();
+  });
+
   it("requires meaningful consent and a valid email for an enquiry", () => {
     const result = contactInputSchema.safeParse({
       name: "A reader",
