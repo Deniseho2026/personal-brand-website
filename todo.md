@@ -49,3 +49,5 @@
 - [ ] Save a checkpoint for the deployed homepage section-management feature.
 - [x] Add an optional safe link field for work-record items and use it on homepage cards with a /work fallback.
 - [ ] Validate work-record link storage and homepage navigation before the final checkpoint.
+- [x] Change the About-page biography wording to say Denise spent sixteen years in banking, removing the UBS reference from this paragraph.
+- [x] Verify the About-page copy visually and save a new checkpoint.
