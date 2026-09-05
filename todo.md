@@ -25,3 +25,7 @@
 - [x] Add “After 16 years in the field” to the homepage journey introduction.
 - [x] Update the first journey label and description, and rename the final journey label to “Painting”.
 - [x] Verify the homepage copy visually and save a new checkpoint.
+- [x] Change the Traditional Chinese image caption to “一個安靜, 讓人反思的空間。”
+- [x] Remove the Traditional Chinese artwork title from the homepage card.
+- [x] Change the Traditional Chinese artwork metadata to “紙本水彩 ”.
+- [x] Verify the homepage edits visually and save a new checkpoint.

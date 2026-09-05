@@ -38,7 +38,7 @@ export const siteCopy = {
   readMore: { en: "Read more", zh: "繼續閱讀" },
   viewAll: { en: "View all", zh: "查看全部" },
   hongKongOnly: { en: "Hong Kong only", zh: "只限香港" },
-  studioLabel: { en: "A quiet space for reflection", zh: "一個安靜的空間，讓人反思" },
+  studioLabel: { en: "A quiet space for reflection", zh: "一個安靜, 讓人反思的空間。" },
   closing: {
     en: "There are many ways of coming closer to ourselves — through words, images, creativity, conversation and relationship. I hope this space offers a place to pause, explore and perhaps discover something new.",
     zh: "我們可以透過文字、影像、創作、對話與關係，慢慢走近自己。希望這個空間，能讓你停一停、探索一下，也許發現一些新的可能。",
@@ -100,7 +100,7 @@ export const initialArticles = [
 ];
 
 export const initialArtworks = [
-  { slug: "shoreline-study", title: { en: "Shoreline study", zh: "海岸習作" }, year: "2026", medium: { en: "Watercolour on paper", zh: "紙本水彩" }, description: { en: "A placeholder for a future artwork from Denise’s own practice.", zh: "為何穎文日後的個人作品預留的位置。" }, image: assetUrls.art },
+  { slug: "shoreline-study", title: { en: "Shoreline study", zh: "" }, year: "2026", medium: { en: "Watercolour on paper", zh: "紙本水彩" }, description: { en: "A placeholder for a future artwork from Denise’s own practice.", zh: "為何穎文日後的個人作品預留的位置。" }, image: assetUrls.art },
   { slug: "inner-weather", title: { en: "Inner weather", zh: "內在天氣" }, year: "—", medium: { en: "Future collection", zh: "未來系列" }, description: { en: "An invitation to add a painting, sketch, or creative experiment with material notes.", zh: "可在此新增繪畫、速寫或創作實驗，並附上作品資料。" }, image: assetUrls.hero },
 ];
 
