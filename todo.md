@@ -15,3 +15,6 @@
 - [x] Fix published `/studio` owner authentication so the owner account is recognized on the custom domain.
 - [x] Verify the protected `/studio` route and keep non-owner access blocked after the fix.
 - [x] Create a new checkpoint for the published owner-access fix.
+- [x] Clarify the owner authentication handoff so the Content Studio clearly explains whether the current browser session is signed in.
+- [x] Improve the empty Content Studio library state with explicit first-use guidance and content-source explanation.
+- [x] Validate that non-owner sessions remain blocked and owner sessions can load database content.
