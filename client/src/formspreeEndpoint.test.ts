@@ -13,5 +13,5 @@ describe("Formspree endpoint configuration", () => {
 
     expect([401, 403, 404]).not.toContain(response.status);
     expect(response.status).toBeLessThan(500);
-  });
+  }, 15_000);
 });
