@@ -1,35 +1,18 @@
 import { PageFrame, SectionHeading } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { assetUrls, initialArticles, initialArtworks, journey, projects, siteCopy, t, workAreas } from "@/content/siteContent";
-import { mapArticlePreview, mapJourneyRecord, mapWorkRecord } from "@/content/publicContent";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
-import { trpc } from "@/lib/trpc";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
   const { locale } = useLanguage();
   usePageMetadata(locale === "en" ? "Psychology, Art & Words" : "心理學、藝術與文字", t(siteCopy.hero, locale), locale);
-  const journeyContent = trpc.content.listPublished.useQuery({ kind: "journey" });
-  const workRecordContent = trpc.content.listPublished.useQuery({ kind: "work-record" });
-  const articleContent = trpc.content.listPublished.useQuery({ kind: "article" });
-  const artworkContent = trpc.content.listPublished.useQuery({ kind: "artwork" });
-  const projectContent = trpc.content.listPublished.useQuery({ kind: "project" });
-  const featuredArticle = articleContent.data?.[0]
-    ? mapArticlePreview(articleContent.data[0], { image: initialArticles[0].image, category: initialArticles[0].category, title: initialArticles[0].title, excerpt: initialArticles[0].excerpt, href: `/writing/${initialArticles[0].slug}` })
-    : { image: initialArticles[0].image, category: initialArticles[0].category, title: initialArticles[0].title, excerpt: initialArticles[0].excerpt, href: `/writing/${initialArticles[0].slug}` };
-  const featuredArtwork = artworkContent.data?.[0]
-    ? { image: artworkContent.data[0].imageUrl || initialArtworks[0].image, medium: { en: artworkContent.data[0].mediumEn || "Artwork", zh: artworkContent.data[0].mediumZh || "作品" }, title: { en: artworkContent.data[0].titleEn, zh: artworkContent.data[0].titleZh }, year: artworkContent.data[0].year || "", href: "/art" }
-    : { image: initialArtworks[0].image, medium: initialArtworks[0].medium, title: initialArtworks[0].title, year: initialArtworks[0].year, href: "/art" };
-  const featuredProject = projectContent.data?.[0]
-    ? { type: { en: projectContent.data[0].categoryEn || "Project", zh: projectContent.data[0].categoryZh || "項目" }, title: { en: projectContent.data[0].titleEn, zh: projectContent.data[0].titleZh }, description: { en: projectContent.data[0].excerptEn || projectContent.data[0].bodyEn || "", zh: projectContent.data[0].excerptZh || projectContent.data[0].bodyZh || "" }, href: "/art" }
-    : { type: projects[0].type, title: projects[0].title, description: projects[0].description, href: "/art" };
-  const journeyItems = journeyContent.data?.length
-    ? journeyContent.data.map(mapJourneyRecord)
-    : journey.map(item => ({ ...item, image: "" }));
-  const workItems = workRecordContent.data?.length
-    ? workRecordContent.data.map(mapWorkRecord)
-    : workAreas.map(area => ({ ...area, image: "" }));
+  const featuredArticle = { image: initialArticles[0].image, category: initialArticles[0].category, title: initialArticles[0].title, excerpt: initialArticles[0].excerpt, href: `/writing/${initialArticles[0].slug}` };
+  const featuredArtwork = { image: initialArtworks[0].image, medium: initialArtworks[0].medium, title: initialArtworks[0].title, year: initialArtworks[0].year, href: "/art" };
+  const featuredProject = { type: projects[0].type, title: projects[0].title, description: projects[0].description, href: "/art" };
+  const journeyItems = journey.map(item => ({ ...item, image: "" }));
+  const workItems = workAreas.map(area => ({ ...area, image: "" }));
 
   return (
     <PageFrame>

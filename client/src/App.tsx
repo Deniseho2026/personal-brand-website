@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -12,13 +12,14 @@ import ArticleDetail from "./pages/ArticleDetail";
 import Art from "./pages/Art";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import StudioCMS from "./pages/StudioCMS";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
-    <Switch>
+    <WouterRouter base={base}>
+      <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/404"} component={NotFound} />
       <Route path={"/about"} component={About} />
@@ -28,9 +29,9 @@ function Router() {
       <Route path={"/art"} component={Art} />
       <Route path={"/services"} component={Services} />
       <Route path={"/contact"} component={Contact} />
-      <Route path={"/studio"} component={StudioCMS} />
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </WouterRouter>
   );
 }
 
