@@ -68,6 +68,8 @@
 - [x] Validate the Formspree endpoint with an automated connectivity test and a successful marked test submission.
 - [ ] Save and publish the static conversion checkpoint with the deployment instructions after the remaining checks pass.
 - [x] Verify the public GitHub repository and project remote connection.
-- [ ] Push the static conversion checkpoint and GitHub Pages workflow to the public repository.
+- [x] Push the static conversion checkpoint and GitHub Pages workflow to the public repository.
 - [ ] Verify the GitHub Pages workflow and public Pages URL.
 - [ ] Connect or configure Cloudflare Pages as the primary deployment and verify its public URL.
+- [x] Replace relative `/manus-storage` image paths with portable public URLs for GitHub Pages and Cloudflare Pages.
+- [ ] Verify all homepage and article images load on the GitHub Pages URL before the final deployment checkpoint.
