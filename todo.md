@@ -69,7 +69,17 @@
 - [ ] Save and publish the static conversion checkpoint with the deployment instructions after the remaining checks pass.
 - [x] Verify the public GitHub repository and project remote connection.
 - [x] Push the static conversion checkpoint and GitHub Pages workflow to the public repository.
-- [ ] Verify the GitHub Pages workflow and public Pages URL.
+- [x] Verify the GitHub Pages workflow and public Pages URL.
 - [ ] Connect or configure Cloudflare Pages as the primary deployment and verify its public URL.
 - [x] Replace relative `/manus-storage` image paths with portable public URLs for GitHub Pages and Cloudflare Pages.
 - [ ] Verify all homepage and article images load on the GitHub Pages URL before the final deployment checkpoint.
+- [ ] Verify the GitHub Pages Writing index shows all article preview images.
+- [ ] Verify `/writing/watercolour-attention` loads directly with its article image.
+- [ ] Review attachment 3 and map its requirements to the current static website architecture.
+- [ ] Propose prioritized modification options, maintenance impact, and deployment implications based on attachment 3.
+- [ ] Do not implement any website changes until the user approves the proposed plan.
+- [x] Reconfirm all current siteContent imports, exports, article slugs, bilingual values, and image URLs before the Option B refactor.
+- [x] Split site content into clear articles, artworks, projects, services, biography, site, and media modules with a compatibility export.
+- [x] Verify no page layout, styles, routes, wording, image URLs, contact configuration, or deployment configuration changed.
+- [x] Run type checks, tests, static build, route checks, content-integrity checks, and responsive verification. Mobile verification completed for Home, Writing, article detail, Services, and Contact.
+- [ ] Save the Option B refactoring checkpoint and report the result before any further work.
