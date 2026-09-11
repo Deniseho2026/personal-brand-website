@@ -82,4 +82,14 @@
 - [x] Split site content into clear articles, artworks, projects, services, biography, site, and media modules with a compatibility export.
 - [x] Verify no page layout, styles, routes, wording, image URLs, contact configuration, or deployment configuration changed.
 - [x] Run type checks, tests, static build, route checks, content-integrity checks, and responsive verification. Mobile verification completed for Home, Writing, article detail, Services, and Contact.
-- [ ] Save the Option B refactoring checkpoint and report the result before any further work.
+- [x] Save the Option B refactoring checkpoint and report the result before any further work.
+- [x] Apply the requested bilingual About Me content in client/src/content/biography.ts only; superseded by the revised request below; siteContent.ts and design/deployment files were not edited.
+- [x] Run TypeScript check, existing tests, static build, and desktop/mobile language verification without creating a checkpoint; superseded by the revised request below.
+- [x] Confirm unrelated pages and content remain unchanged, show the uncommitted preview, and receive owner approval.
+- [x] Apply the revised About Me bilingual content including London residence in client/src/content/biography.ts only; siteContent.ts, design, and deployment settings were not changed.
+- [x] Verify the revised About Me content with TypeScript, tests, static build, desktop/mobile English and Traditional Chinese previews, and unrelated-content checks without a checkpoint.
+- [x] Show the revised uncommitted preview and receive owner approval.
+- [x] About Me only: combine the current biography sections into one continuous text block without changing their wording.
+- [x] About Me only: reduce the English and Traditional Chinese name display size to approximately 1.5–2 times body text size.
+- [x] About Me only: remove the existing What I Value heading, six value cards, and associated decorative elements without replacement content.
+- [x] Verify the About Me adjustment on desktop/mobile in English and Traditional Chinese, run checks, confirm unrelated pages are unchanged, and receive approval without a checkpoint.
