@@ -93,3 +93,6 @@
 - [x] About Me only: reduce the English and Traditional Chinese name display size to approximately 1.5–2 times body text size.
 - [x] About Me only: remove the existing What I Value heading, six value cards, and associated decorative elements without replacement content.
 - [x] Verify the About Me adjustment on desktop/mobile in English and Traditional Chinese, run checks, confirm unrelated pages are unchanged, and receive approval without a checkpoint.
+- [x] Add the exact UK-only Watercolour Lessons service content under Services without inventing pricing, qualifications, testimonials, or extra services.
+- [x] Use the existing user-provided watercolour class photographs for the Watercolour Lessons section; do not use stock images.
+- [x] Verify Services desktop/mobile, image rendering, TypeScript, tests, static build, and unrelated-page integrity without a checkpoint; show preview and wait for approval.
