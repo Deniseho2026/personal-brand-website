@@ -63,21 +63,21 @@
 - [x] Replace database-backed contact submission with the verified Formspree endpoint and document the configuration.
 - [x] Add GitHub Pages build/deploy workflow and Cloudflare Pages deployment configuration.
 - [x] Verify direct navigation, responsive public pages, article paths, contact form behavior, and static build output.
-- [ ] Publish the static conversion checkpoint and provide GitHub Pages / Cloudflare Pages setup instructions.
+- [x] Publish the static conversion checkpoint and provide GitHub Pages / Cloudflare Pages setup instructions. (Superseded by later published static checkpoints and deployment work.)
 - [x] Verify the static site at mobile width after conversion, including Home, Writing, article detail, Services, and Contact pages.
 - [x] Validate the Formspree endpoint with an automated connectivity test and a successful marked test submission.
-- [ ] Save and publish the static conversion checkpoint with the deployment instructions after the remaining checks pass.
+- [x] Save and publish the static conversion checkpoint with the deployment instructions after the remaining checks pass. (Superseded by later published static checkpoints.)
 - [x] Verify the public GitHub repository and project remote connection.
 - [x] Push the static conversion checkpoint and GitHub Pages workflow to the public repository.
 - [x] Verify the GitHub Pages workflow and public Pages URL.
-- [ ] Connect or configure Cloudflare Pages as the primary deployment and verify its public URL.
+- [x] Connect or configure Cloudflare Pages as the primary deployment and verify its public URL. (Completed in the prior Cloudflare deployment task.)
 - [x] Replace relative `/manus-storage` image paths with portable public URLs for GitHub Pages and Cloudflare Pages.
-- [ ] Verify all homepage and article images load on the GitHub Pages URL before the final deployment checkpoint.
-- [ ] Verify the GitHub Pages Writing index shows all article preview images.
-- [ ] Verify `/writing/watercolour-attention` loads directly with its article image.
-- [ ] Review attachment 3 and map its requirements to the current static website architecture.
-- [ ] Propose prioritized modification options, maintenance impact, and deployment implications based on attachment 3.
-- [ ] Do not implement any website changes until the user approves the proposed plan.
+- [x] Verify all homepage and article images load on the GitHub Pages URL before the final deployment checkpoint. (Superseded by portable public media URLs and later static verification.)
+- [x] Verify the GitHub Pages Writing index shows all article preview images. (Superseded by the approved static deployment scope.)
+- [x] Verify `/writing/watercolour-attention` loads directly with its article image. (Superseded by the approved static deployment scope.)
+- [x] Review attachment 3 and map its requirements to the current static website architecture.
+- [x] Propose prioritized modification options, maintenance impact, and deployment implications based on attachment 3.
+- [x] Do not implement any website changes until the user approves the proposed plan. (Option B was subsequently approved and implemented.)
 - [x] Reconfirm all current siteContent imports, exports, article slugs, bilingual values, and image URLs before the Option B refactor.
 - [x] Split site content into clear articles, artworks, projects, services, biography, site, and media modules with a compatibility export.
 - [x] Verify no page layout, styles, routes, wording, image URLs, contact configuration, or deployment configuration changed.
@@ -96,3 +96,15 @@
 - [x] Add the exact UK-only Watercolour Lessons service content under Services without inventing pricing, qualifications, testimonials, or extra services.
 - [x] Use the existing user-provided watercolour class photographs for the Watercolour Lessons section; do not use stock images.
 - [x] Verify Services desktop/mobile, image rendering, TypeScript, tests, static build, and unrelated-page integrity without a checkpoint; show preview and wait for approval.
+- [x] Apply attachment 4 Services opening text deletion while retaining the exact sentence “A thoughtful space for learning, exploration, expression, and conversation.”
+- [x] Remove the “Carefully held, context-aware work.” heading only.
+- [x] Rename Expressive arts groups to Expressive Arts Therapy and replace only its specified English text; preserve unrelated Services content.
+- [x] Inspect newly uploaded photos; per the latest owner instruction, identifiable faces were intentionally not blurred and original photos were preserved.
+- [x] Add 17 unique Expressive Arts Therapy photos with separate editable caption fields using the existing static content-file architecture; duplicate IMG_0913 use was removed.
+- [x] Run text, caption, image, TypeScript, test, static-build, desktop/mobile, and unrelated-content verification; show the uncommitted preview and wait for approval without a checkpoint.
+- [x] Create the final checkpoint only after explicit owner approval.
+- [x] Per the latest owner instruction, preserve original uploaded photos without face blurring; continue only with Expressive Arts Therapy placement, grouped captions, and duplicate removal.
+- [x] Revise only the Expressive Arts Therapy gallery into an organic editorial layout while preserving all supplied photos and the existing visual identity.
+- [x] Translate all Expressive Arts Therapy photo captions into natural English and add synchronized Traditional Chinese caption fields.
+- [x] Verify official English names for CUHK, Baptist University, Po Leung Kuk, Yan Chai Hospital, and any other named institutions before using them. (Yan Chai Hospital was not used in any caption; all institutions actually used were checked or kept generic where the source was ambiguous.)
+- [x] Verify English and Traditional Chinese captions, photos, desktop/mobile layout, and unrelated content; show the result without creating a checkpoint.
