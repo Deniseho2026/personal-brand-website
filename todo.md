@@ -108,3 +108,9 @@
 - [x] Translate all Expressive Arts Therapy photo captions into natural English and add synchronized Traditional Chinese caption fields.
 - [x] Verify official English names for CUHK, Baptist University, Po Leung Kuk, Yan Chai Hospital, and any other named institutions before using them. (Yan Chai Hospital was not used in any caption; all institutions actually used were checked or kept generic where the source was ambiguous.)
 - [x] Verify English and Traditional Chinese captions, photos, desktop/mobile layout, and unrelated content; show the result without creating a checkpoint.
+- [x] Update only the Talks & workshops service with the seven supplied images, preserving original image content.
+- [x] Add the exact supporting lines “Jungian psychology workshops / talks” and “榮格心理學工作坊／講座” while preserving existing English descriptions and matching Traditional Chinese content closely.
+- [x] Render the seven images in a subtle organic arrangement, verify English/Traditional Chinese desktop/mobile previews and unrelated sections, and wait for review without a checkpoint.
+- [x] Investigate why Talk and Workshop photos appear on mobile but are reported missing on desktop, and verify actual desktop rendering. (Local desktop preview shows all seven; the published site remains on the previous checkpoint because this work is not yet published.)
+- [x] Confirm and document the destination and purpose of each black Services arrow. (Each arrow links to `/contact` with the relevant service name in its accessibility label.)
+- [ ] If needed, fix only the Talk and Workshop desktop gallery, then verify desktop/mobile and wait for review without a checkpoint.

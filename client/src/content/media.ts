@@ -5,6 +5,16 @@ export const assetUrls = {
   mark: "https://personalbrnd-eozfgujc.manus.space/manus-storage/denise-logo-mark_d57eee3a.png",
 };
 
+export const talksWorkshopImages = [
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5693_31046287.jpg", alt: "Talk and workshop discussion", layout: "anchor" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5669_338a084a.jpg", alt: "Jungian psychology workshop poster", layout: "tall" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5694_22333634.jpg", alt: "Expressive arts workshop poster", layout: "square" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5699_21c3214b.jpg", alt: "Artwork from a workshop", layout: "wide" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_2101_87ebecf5.jpg", alt: "Participant artwork from a workshop", layout: "wide" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_2100_ba126a48.jpg", alt: "Participant artwork from a workshop", layout: "tall" },
+  { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_2102_28fc7bb0.jpg", alt: "Participant artwork from a workshop", layout: "anchor" },
+];
+
 export const expressiveArtsPhotos = [
   { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_0953_8b7a62b2.jpg", caption: { en: "Middle-aged Women's Group", zh: "中年女士小組" }, alt: "Expressive arts group activity", layout: "anchor" },
   { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_0951_92cae5f5.jpg", caption: { en: "Middle-aged Women's Group", zh: "中年女士小組" }, alt: "Expressive arts group activity", layout: "small" },
