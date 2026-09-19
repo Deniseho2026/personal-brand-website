@@ -1,6 +1,6 @@
 import { PageFrame, SectionHeading } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { assetUrls, initialArticles, initialArtworks, journey, projects, siteCopy, t, workAreas } from "@/content/siteContent";
+import { assetUrls, articleText, initialArticles, initialArtworks, journey, projects, siteCopy, t, workAreas } from "@/content/siteContent";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
@@ -51,7 +51,7 @@ export default function Home() {
       <section className="page-section studio-highlights">
         <div className="highlight-head"><SectionHeading eyebrow={locale === "en" ? "From the studio" : "來自工作室"} title={locale === "en" ? "Notes, images, and ongoing work." : "文字、圖像，以及仍在進行的工作。"} /><Link href="/writing" className="text-link">{t(siteCopy.viewAll, locale)} <ArrowRight size={14} /></Link></div>
         <div className="editorial-grid">
-          <article className="writing-feature"><img src={featuredArticle.image} alt={t(featuredArticle.title, locale)} /><div><p className="content-label">{t(featuredArticle.category, locale)}</p><h3>{t(featuredArticle.title, locale)}</h3><p>{t(featuredArticle.excerpt, locale)}</p><Link href={featuredArticle.href} className="text-link">{t(siteCopy.readMore, locale)} <ArrowRight size={14} /></Link></div></article>
+          <article className="writing-feature"><img src={featuredArticle.image} alt={articleText(featuredArticle.title, locale)} /><div><p className="content-label">{articleText(featuredArticle.category, locale)}</p><h3>{articleText(featuredArticle.title, locale)}</h3><p>{articleText(featuredArticle.excerpt, locale)}</p><Link href={featuredArticle.href} className="text-link">{t(siteCopy.readMore, locale)} <ArrowRight size={14} /></Link></div></article>
           <article className="art-feature"><img src={featuredArtwork.image} alt={t(featuredArtwork.title, locale)} /><div><p className="content-label">{t(featuredArtwork.medium, locale)}{locale === "en" && featuredArtwork.year ? ` · ${featuredArtwork.year}` : ""}</p><h3>{t(featuredArtwork.title, locale)}</h3><Link href={featuredArtwork.href} className="text-link">{locale === "en" ? "Visit the gallery" : "前往作品集"} <ArrowRight size={14} /></Link></div></article>
         </div>
         <Link href={featuredProject.href} className="home-project-preview"><p className="content-label">{t(featuredProject.type, locale)} · 01</p><div><h3>{t(featuredProject.title, locale)}</h3><p>{t(featuredProject.description, locale)}</p></div><span>{locale === "en" ? "Projects & collections" : "項目與作品系列"}<ArrowRight size={16} /></span></Link>
