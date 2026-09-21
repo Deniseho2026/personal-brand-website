@@ -6,5 +6,6 @@ export * from "./services";
 export * from "./biography";
 export * from "./articles";
 export * from "./artworks";
+export * from "./artDoorways";
 export * from "./projects";
 export * from "./contact";

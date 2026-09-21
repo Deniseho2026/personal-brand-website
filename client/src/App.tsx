@@ -10,7 +10,7 @@ import MyWork from "./pages/MyWork";
 import Writing from "./pages/Writing";
 import ArticleDetail from "./pages/ArticleDetail";
 import Art from "./pages/Art";
-import Services from "./pages/Services";
+import ArtDoorwayDetail from "./pages/ArtDoorwayDetail";
 import Contact from "./pages/Contact";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -26,8 +26,10 @@ function Router() {
       <Route path={"/work"} component={MyWork} />
       <Route path={"/writing/:slug"} component={ArticleDetail} />
       <Route path={"/writing"} component={Writing} />
+      <Route path={"/art/watercolour"} component={ArtDoorwayDetail} />
+      <Route path={"/art/expressive-arts"} component={ArtDoorwayDetail} />
+      <Route path={"/art/art-in-community"} component={ArtDoorwayDetail} />
       <Route path={"/art"} component={Art} />
-      <Route path={"/services"} component={Services} />
       <Route path={"/contact"} component={Contact} />
       <Route component={NotFound} />
       </Switch>

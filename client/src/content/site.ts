@@ -4,7 +4,6 @@ export const navigation = [
   { href: "/work", label: { en: "My Work", zh: "我的工作" } },
   { href: "/writing", label: { en: "Writing", zh: "文字" } },
   { href: "/art", label: { en: "Art", zh: "藝術" } },
-  { href: "/services", label: { en: "Services", zh: "服務" } },
   { href: "/contact", label: { en: "Contact", zh: "聯絡我" } },
 ];
 
