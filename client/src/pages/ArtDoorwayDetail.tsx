@@ -1,5 +1,7 @@
 import { PageFrame } from "@/components/SiteChrome";
+import ExpressiveArtsProfile from "@/components/ExpressiveArtsProfile";
 import { artLandingCopy, getArtDoorway, watercolourArtworks } from "@/content/artDoorways";
+import { expressiveArtsProfileSlides } from "@/content/expressiveArtsProfile";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -50,7 +52,7 @@ export default function ArtDoorwayDetail() {
         <h1>{doorway.title[locale]}</h1>
         <p>{doorway.subtitle[locale]}</p>
       </div>
-      {doorway.slug === "watercolour" ? <WatercolourGallery locale={locale} /> : <>
+      {doorway.slug === "watercolour" ? <WatercolourGallery locale={locale} /> : doorway.slug === "expressive-arts" ? <ExpressiveArtsProfile slides={expressiveArtsProfileSlides} locale={locale} /> : <>
         <img className="art-doorway-detail-image" src={doorway.image} alt={doorway.alt[locale]} />
         <div className="art-doorway-future-note">
           <p className="content-label">{locale === "en" ? "Content to be added" : "稍後加入內容"}</p>

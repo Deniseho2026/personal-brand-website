@@ -12,6 +12,7 @@ import ArticleDetail from "./pages/ArticleDetail";
 import Art from "./pages/Art";
 import ArtDoorwayDetail from "./pages/ArtDoorwayDetail";
 import Contact from "./pages/Contact";
+import Services from "./pages/Services";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 function Router() {
@@ -26,6 +27,8 @@ function Router() {
       <Route path={"/work"} component={MyWork} />
       <Route path={"/writing/:slug"} component={ArticleDetail} />
       <Route path={"/writing"} component={Writing} />
+      <Route path={"/services/:serviceId"} component={Services} />
+      <Route path={"/services"} component={Services} />
       <Route path={"/art/watercolour"} component={ArtDoorwayDetail} />
       <Route path={"/art/expressive-arts"} component={ArtDoorwayDetail} />
       <Route path={"/art/art-in-community"} component={ArtDoorwayDetail} />
