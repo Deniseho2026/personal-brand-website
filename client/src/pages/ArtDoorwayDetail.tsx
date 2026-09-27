@@ -1,5 +1,6 @@
 import { PageFrame } from "@/components/SiteChrome";
 import ExpressiveArtsProfile from "@/components/ExpressiveArtsProfile";
+import { artInCommunityCopy } from "@/content/artInCommunity";
 import { artLandingCopy, getArtDoorway, watercolourArtworks } from "@/content/artDoorways";
 import { expressiveArtsProfileSlides } from "@/content/expressiveArtsProfile";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -32,6 +33,33 @@ function WatercolourGallery({ locale }: { locale: "en" | "zh" }) {
   </section>;
 }
 
+function ArtInCommunityContent({ locale }: { locale: "en" | "zh" }) {
+  const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const photo = artInCommunityCopy.photos[current];
+  const move = (direction: 1 | -1) => setCurrent(index => (index + direction + artInCommunityCopy.photos.length) % artInCommunityCopy.photos.length);
+
+  return <div className="art-community-content">
+    <div className="art-community-copy">
+      {artInCommunityCopy.paragraphs[locale].map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+    </div>
+    <section className="art-community-gallery" aria-label={locale === "en" ? "Pinner Sketch Club photographs" : "Pinner Sketch Club照片"}>
+      <div className="art-community-gallery-desktop">
+        {artInCommunityCopy.photos.map((item, index) => <figure className={`art-community-photo art-community-photo-${(index % 5) + 1}`} key={item.src}>
+          <img src={item.src} alt="" loading={index > 2 ? "lazy" : "eager"} width={item.width} height={item.height} />
+        </figure>)}
+      </div>
+      <div className="art-community-gallery-mobile">
+        <div className="art-community-swipe-stage" onTouchStart={event => setTouchStart(event.touches[0].clientX)} onTouchEnd={event => { if (touchStart === null) return; const distance = event.changedTouches[0].clientX - touchStart; if (Math.abs(distance) > 45) move(distance < 0 ? 1 : -1); setTouchStart(null); }}>
+          <img src={photo.src} alt="" width={photo.width} height={photo.height} />
+          <div className="art-community-swipe-counter">{current + 1} / {artInCommunityCopy.photos.length}</div>
+        </div>
+        <div className="art-community-swipe-controls"><button type="button" onClick={() => move(-1)} aria-label={locale === "en" ? "Previous photograph" : "上一張照片"}><ArrowLeft size={16} /></button><span>{locale === "en" ? "Swipe to browse" : "左右滑動瀏覽"}</span><button type="button" onClick={() => move(1)} aria-label={locale === "en" ? "Next photograph" : "下一張照片"}><ArrowRight size={16} /></button></div>
+      </div>
+    </section>
+  </div>;
+}
+
 export default function ArtDoorwayDetail() {
   const { locale } = useLanguage();
   const [location] = useLocation();
@@ -52,7 +80,7 @@ export default function ArtDoorwayDetail() {
         <h1>{doorway.title[locale]}</h1>
         <p>{doorway.subtitle[locale]}</p>
       </div>
-      {doorway.slug === "watercolour" ? <WatercolourGallery locale={locale} /> : doorway.slug === "expressive-arts" ? <ExpressiveArtsProfile slides={expressiveArtsProfileSlides} locale={locale} /> : <>
+      {doorway.slug === "watercolour" ? <WatercolourGallery locale={locale} /> : doorway.slug === "expressive-arts" ? <ExpressiveArtsProfile slides={expressiveArtsProfileSlides} locale={locale} /> : doorway.slug === "art-in-community" ? <ArtInCommunityContent locale={locale} /> : <>
         <img className="art-doorway-detail-image" src={doorway.image} alt={doorway.alt[locale]} />
         <div className="art-doorway-future-note">
           <p className="content-label">{locale === "en" ? "Content to be added" : "稍後加入內容"}</p>
