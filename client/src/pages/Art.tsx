@@ -7,7 +7,7 @@ import { Link } from "wouter";
 
 export default function Art() {
   const { locale } = useLanguage();
-  usePageMetadata(artLandingCopy.title[locale], locale === "en" ? "Three ways art lives in Denise Ho's life." : "藝術以三種方式存在於何穎文的生命之中。", locale);
+  usePageMetadata(artLandingCopy.title[locale], locale === "en" ? "Three ways art lives in Denise Ho's life." : "藝術以三種方式存在於何惠敏的生命之中。", locale);
 
   return <PageFrame>
     <section className="page-section art-doorways-intro">

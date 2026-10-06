@@ -113,4 +113,4 @@
 - [x] Render the seven images in a subtle organic arrangement, verify English/Traditional Chinese desktop/mobile previews and unrelated sections, and wait for review without a checkpoint.
 - [x] Investigate why Talk and Workshop photos appear on mobile but are reported missing on desktop, and verify actual desktop rendering. (Local desktop preview shows all seven; the published site remains on the previous checkpoint because this work is not yet published.)
 - [x] Confirm and document the destination and purpose of each black Services arrow. (Each arrow links to `/contact` with the relevant service name in its accessibility label.)
-- [ ] If needed, fix only the Talk and Workshop desktop gallery, then verify desktop/mobile and wait for review without a checkpoint.
+- [x] If needed, fix only the Talk and Workshop desktop gallery, then verify desktop/mobile and wait for review without a checkpoint. (Verified in the approved Talks & Workshops checkpoint; no further fix was required.)

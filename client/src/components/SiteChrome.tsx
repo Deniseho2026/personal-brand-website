@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { assetUrls, contactDetails, navigation, siteCopy, t } from "@/content/siteContent";
-import { Facebook, Instagram, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 
@@ -52,7 +52,6 @@ export function SiteFooter() {
       <div className="footer-grid">
         <div>
           <div className="footer-brand"><img src={assetUrls.mark} alt="" /><span>Denise Ho</span></div>
-          <p>{t(siteCopy.studioLabel, locale)}</p>
         </div>
         <div className="footer-contact">
           <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
@@ -61,6 +60,7 @@ export function SiteFooter() {
         <div className="footer-social" aria-label={locale === "en" ? "Social links" : "社交媒體連結"}>
           <a href={contactDetails.facebook} target="_blank" rel="noreferrer" aria-label="Facebook 深度心理學筆記"><Facebook size={17} /></a>
           <a href={contactDetails.instagram} target="_blank" rel="noreferrer" aria-label="Instagram @denise.wmho"><Instagram size={17} /></a>
+          <a href={contactDetails.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn Denise Ho"><Linkedin size={17} /></a>
         </div>
       </div>
       <div className="footer-base">

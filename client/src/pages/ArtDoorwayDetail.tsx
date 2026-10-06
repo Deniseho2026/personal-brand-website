@@ -66,7 +66,7 @@ export default function ArtDoorwayDetail() {
   const slug = decodeURIComponent(location.replace("/art/", ""));
   const doorway = getArtDoorway(slug);
   const title = doorway ? doorway.title[locale] : locale === "en" ? "Art" : "藝術";
-  usePageMetadata(title, locale === "en" ? "Art by Denise Ho." : "何穎文的藝術。", locale);
+  usePageMetadata(title, locale === "en" ? "Art by Denise Ho." : "何惠敏的藝術。", locale);
 
   if (!doorway) {
     return <PageFrame><section className="page-section access-page"><p className="eyebrow"><span />{artLandingCopy.eyebrow[locale]}</p><h1>{locale === "en" ? "This page is not available." : "找不到這個頁面。"}</h1><Link href="/art" className="button-primary">{locale === "en" ? "Return to art" : "返回藝術頁"}</Link></section></PageFrame>;

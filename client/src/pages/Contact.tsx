@@ -24,7 +24,7 @@ const labels: Record<EnquiryType, { en: string; zh: string }> = {
 
 export default function Contact() {
   const { locale } = useLanguage();
-  usePageMetadata(locale === "en" ? "Contact" : "聯絡我", locale === "en" ? "Get in touch with Denise Ho about counselling, expressive arts, watercolour, talks, and workshops." : "歡迎就心理輔導、表達藝術、水彩、講座及工作坊聯絡何穎文。", locale);
+  usePageMetadata(locale === "en" ? "Contact" : "聯絡我", locale === "en" ? "Get in touch with Denise Ho about counselling, expressive arts, watercolour, talks, and workshops." : "歡迎就心理輔導、表達藝術、水彩、講座及工作坊聯絡何惠敏。", locale);
   const [form, setForm] = useState<FormState>(emptyForm);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [error, setError] = useState("");
