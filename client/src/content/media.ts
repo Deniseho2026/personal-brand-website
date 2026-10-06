@@ -3,6 +3,10 @@ export const assetUrls = {
   art: "https://personalbrnd-eozfgujc.manus.space/manus-storage/denise-watercolour-landscape_62e4a954.jpg",
   writing: "https://personalbrnd-eozfgujc.manus.space/manus-storage/denise-writing-notebook_0c930b40.jpg",
   mark: "https://personalbrnd-eozfgujc.manus.space/manus-storage/denise-logo-mark_d57eee3a.png",
+  aboutChildhoodPortrait: "https://personalbrnd-eozfgujc.manus.space/manus-storage/about-childhood-pencil-loose-v2_f7e43b7b.png",
+  aboutTuenMunOld: "https://personalbrnd-eozfgujc.manus.space/manus-storage/about-tuen-mun-old_0327a492.png",
+  aboutTuenMunTransitional: "https://personalbrnd-eozfgujc.manus.space/manus-storage/about-tuen-mun-transitional_9c4383ad.png",
+  aboutTuenMunPresent: "https://personalbrnd-eozfgujc.manus.space/manus-storage/about-tuen-mun-present_e6d0b391.png",
 };
 
 export const talksWorkshopImages = [

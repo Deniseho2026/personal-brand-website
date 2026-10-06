@@ -1,6 +1,7 @@
 import { PageFrame, SectionHeading } from "@/components/SiteChrome";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { assetUrls, articleText, initialArticles, siteCopy, t } from "@/content/siteContent";
+import { mindBodyIntroduction } from "@/content/mindBody";
 import { watercolourArtworks } from "@/content/artDoorways";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { ArrowDownRight, ArrowRight } from "lucide-react";
@@ -31,8 +32,8 @@ const homeWorkItems = [
   {
     key: "writing",
     index: "04",
-    title: { en: "Writing", zh: "文字" },
-    description: { en: "Notes on Jungian ideas, creativity, life transitions, and the texture of human experience.", zh: "書寫榮格心理學、創意、人生轉折，以及人類經驗的細緻紋理。" },
+    title: { en: "Mind & Body Series", zh: "文字" },
+    description: { en: mindBodyIntroduction.en, zh: "書寫榮格心理學、創意、人生轉折，以及人類經驗的細緻紋理。" },
     href: "/writing",
   },
 ];
@@ -50,11 +51,11 @@ export default function Home() {
     <PageFrame>
       <section className="hero-section">
         <div className="hero-copy">
-          <h1>Denise<br /><em>Ho</em></h1>
           <p className="hero-statement">{t(siteCopy.hero, locale)}</p>
+          <h1>Denise<br /><em>Ho</em></h1>
           <p className="hero-note">{t(siteCopy.heroNote, locale)}</p>
           <div className="hero-journey">
-            <SectionHeading eyebrow={locale === "en" ? "A connected journey" : "不同的經驗，源自同一條線⋯⋯"} title={locale === "en" ? "There is a thread running through the work" : "不同的經驗，源自同一條線⋯⋯"} />
+            <SectionHeading eyebrow={locale === "en" ? "A connected journey" : "相互連繫的旅程"} title={locale === "en" ? "There is a thread running through the work" : "不同的經驗，源自同一條線⋯⋯"} />
             <Link href="/about" className="hero-journey-link">
               <span>{locale === "en" ? "My professional journey began in banking. After 16 years in the field, I found myself drawn towards a different kind of work — understanding people, exploring the inner life, and finding ways to express what words alone cannot always say..." : "我的職涯從銀行業開始。在這個領域工作了16年後，我逐漸走向另一種工作——理解人、探索內在世界，以及尋找一些方法，讓未能言說的部分可以表達⋯⋯"}</span>
               <ArrowRight className="hero-journey-cue" size={17} aria-hidden="true" />
@@ -74,7 +75,7 @@ export default function Home() {
         <SectionHeading eyebrow={locale === "en" ? "Ways of seeing" : "觀看的方式"} title={locale === "en" ? "Four doors into the same larger world" : "四扇門通向一個更大的領域"} body={locale === "en" ? "Different ways of exploring my inner world." : "以不同的方式探索我的內心世界。"} />
         <div className="door-grid">
           {homeWorkItems.map(area => (
-            <Link key={area.key} href={area.href} className="door-card">
+            <Link key={area.key} href={area.key === "writing" && locale === "en" ? "/writing/mind-body" : area.href} className="door-card">
               <span>{area.index}</span><h3>{t(area.title, locale)}</h3><p>{t(area.description, locale)}</p><ArrowRight size={18} />
             </Link>
           ))}

@@ -9,6 +9,8 @@ import About from "./pages/About";
 import MyWork from "./pages/MyWork";
 import Writing from "./pages/Writing";
 import ArticleDetail from "./pages/ArticleDetail";
+import MindBodySeries from "./pages/MindBodySeries";
+import MindBodyArticle from "./pages/MindBodyArticle";
 import Art from "./pages/Art";
 import ArtDoorwayDetail from "./pages/ArtDoorwayDetail";
 import Contact from "./pages/Contact";
@@ -25,6 +27,8 @@ function Router() {
       <Route path={"/404"} component={NotFound} />
       <Route path={"/about"} component={About} />
       <Route path={"/work"} component={MyWork} />
+      <Route path={"/writing/mind-body/:slug"} component={MindBodyArticle} />
+      <Route path={"/writing/mind-body"} component={MindBodySeries} />
       <Route path={"/writing/:slug"} component={ArticleDetail} />
       <Route path={"/writing"} component={Writing} />
       <Route path={"/services/:serviceId"} component={Services} />

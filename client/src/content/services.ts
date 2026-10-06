@@ -44,7 +44,7 @@ export const services = [
       en: [
         "I have been working as a counsellor for over 12 years, supporting people through periods of emotional difficulty, loss, anxiety, life transitions, and personal change.",
         "My approach is grounded in the belief that counselling is not simply about reducing symptoms or finding quick solutions. It is also an opportunity to slow down, listen more deeply, and develop a fuller understanding of ourselves — including those parts of our experience that may not yet be fully conscious.",
-        "I draw particularly on Jungian psychology, which invites us to explore the unconscious, our inner images, and the shadow — the aspects of ourselves that we may have learned to hide, reject, or overlook. Rather than simply trying to get rid of what is troubling us, I am interested in what our difficulties may be telling us, and how a deeper relationship with ourselves can open possibilities for growth and transformation.",
+        "I draw particularly on Jungian psychology, which invites us to explore the unconscious, our inner images, and the shadow — the aspects of ourselves that we may have learned to hide, reject, or overlook. Dreams can also become part of this exploration. When dreams arise, we may attend together to their images, feelings and associations, and to what they may be bringing into awareness. Rather than simply trying to get rid of what is troubling us, I am interested in what our difficulties may be telling us, and how a deeper relationship with ourselves can open possibilities for growth and transformation.",
         "I also incorporate expressive arts and different creative modalities when appropriate. Images, colour, writing, movement, and other forms of expression can sometimes reach places that words alone cannot. There is no need to be artistic or experienced in art; the focus is on discovering and giving form to what is emerging within.",
         "Alongside this, I pay attention to the body and its sensations. By gently reconnecting with bodily experience, we may become more aware of emotions, needs, boundaries, and ways of being that are not always immediately accessible through thinking.",
         "For me, counselling is a space where we can pause, listen, and become more curious about our inner life. It is not about becoming someone else, but about developing a deeper relationship with who we are and finding a more authentic way of living.",
@@ -52,7 +52,7 @@ export const services = [
       zh: [
         "我從事心理輔導工作超過十二年，曾陪伴不同的人走過情緒困擾、失落、焦慮、人生轉變，以及尋求個人成長的階段。",
         "我相信，心理輔導不只是減輕症狀或尋找快速的解決方法，也是一個讓人慢下來、深入聆聽自己，並逐漸理解內在世界的空間——包括一些我們尚未完全意識到的部分。",
-        "我的取向尤其受到榮格心理學的影響。我重視對無意識、內在意象，以及「陰影」的探索——那些我們可能曾經隱藏、否定或忽略的自己。與其單純地把困擾我們的部分消除，我更關心這些經驗想向我們傳達甚麼，以及當我們願意與自己更深地相遇時，生命如何可能展開新的成長與轉化。",
+        "我的取向尤其受到榮格心理學的影響。我重視對無意識、內在意象，以及「陰影」的探索——那些我們可能曾經隱藏、否定或忽略的自己。夢也可以成為這個探索過程的一部分。當夢出現時，我們可以一起留意夢中的意象、感受與聯想，以及它可能帶進意識中的東西。與其單純地把困擾我們的部分消除，我更關心這些經驗想向我們傳達甚麼，以及當我們願意與自己更深地相遇時，生命如何可能展開新的成長與轉化。",
         "在合適的情況下，我亦會運用表達藝術及不同的創作媒介，包括意象、色彩、書寫、身體動作等。有時候，一幅畫、一種顏色或一個身體動作，可以接觸到一些單靠語言難以表達的內在經驗。這並不需要任何藝術經驗，重點並不在於創作得好不好，而是在創作的過程中，讓內在正在發生的事情有機會被看見。",
         "我亦重視身體所傳遞的訊息，並會邀請來訪者在合適的情況下重新連結自己的身體感受。透過留意身體，我們有時能更深地接觸自己的情緒、需要、界線，以及一些未必能單靠思考察覺的內在經驗。",
         "對我而言，心理輔導是一個可以停下來、聆聽自己，並對內在生命保持好奇的空間，逐漸與自己建立更深的關係，並尋找一種更真實、更貼近自己的生活方式。",

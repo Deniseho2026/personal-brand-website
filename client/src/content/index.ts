@@ -9,3 +9,4 @@ export * from "./artworks";
 export * from "./artDoorways";
 export * from "./projects";
 export * from "./contact";
+export * from "./mindBody";
