@@ -1,0 +1,28 @@
+# Conventional search engines may crawl and index the public website.
+User-agent: *
+Allow: /
+
+# Do not permit named AI training/data crawlers to crawl this original content.
+# Googlebot remains allowed above; Google-Extended is a separate AI-use signal.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+Sitemap: https://deniseho.space/sitemap.xml

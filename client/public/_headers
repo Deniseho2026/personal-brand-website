@@ -1,0 +1,11 @@
+# The official domain may be indexed by conventional search engines, but requests
+# should carry emerging AI-use restriction signals for original articles and artwork.
+https://deniseho.space/*
+  X-Robots-Tag: noai, noimageai
+
+# Keep Cloudflare Pages preview/version domains out of search results.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
