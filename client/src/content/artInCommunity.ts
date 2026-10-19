@@ -17,7 +17,7 @@ export const artInCommunityCopy = {
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5522_53b9dc25.jpg", width: 2048, height: 1536 },
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5524_e3fc4457.jpg", width: 2048, height: 1536 },
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5525_53802473.jpg", width: 1536, height: 2048 },
-    { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5526_68a9d103.jpg", width: 1536, height: 2048 },
+    { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5526-corrected_3d41c592.jpg", width: 936, height: 1050 },
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5557_78748dba.jpg", width: 1536, height: 2048 },
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5563_0c3327f8.jpg", width: 1536, height: 2048 },
     { src: "https://personalbrnd-eozfgujc.manus.space/manus-storage/IMG_5560_93d20c8d.jpg", width: 2048, height: 1536 },

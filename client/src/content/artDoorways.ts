@@ -55,18 +55,18 @@ export const artDoorways: ArtDoorway[] = [
 ];
 
 export const watercolourArtworks: WatercolourArtwork[] = [
-  { title: "Autumn", image: `${storageBase}/manus-storage/Autumn_68b3a4ce.jpg`, width: 1925, height: 2048 },
-  { title: "pussycat", image: `${storageBase}/manus-storage/pussycat_2bea629f.jpg`, width: 1536, height: 2048 },
+  { title: "Autumn", image: `${storageBase}/manus-storage/Autumn-corrected_6bf88764.jpg`, width: 1738, height: 1744 },
+  { title: "pussycat", image: `${storageBase}/manus-storage/pussycat-corrected_74a306ea.jpg`, width: 1175, height: 845 },
   { title: "go for adventure", image: `${storageBase}/manus-storage/go_for_adventure_a177ed24.jpg`, width: 2048, height: 1356 },
   { title: "lightfromparadise", image: `${storageBase}/manus-storage/lightfromparadise_118bcce3.jpg`, width: 2029, height: 2048 },
   { title: "solitude", image: `${storageBase}/manus-storage/solitude_10a7b9bd.jpg`, width: 2048, height: 1008 },
   { title: "cloud", image: `${storageBase}/manus-storage/cloud_b876700d.jpg`, width: 1393, height: 2048 },
   { title: "look up", image: `${storageBase}/manus-storage/look_up_78df1f13.jpg`, width: 2012, height: 2048 },
   { title: "green", image: `${storageBase}/manus-storage/green_249ead1e.jpg`, width: 2048, height: 1536 },
-  { title: "gentleman", image: `${storageBase}/manus-storage/gentleman_7b0d3079.jpg`, width: 1536, height: 2048 },
+  { title: "gentleman", image: `${storageBase}/manus-storage/gentleman-corrected_b07c54ab.jpg`, width: 1200, height: 1660 },
   { title: "road", image: `${storageBase}/manus-storage/road_e4333a90.jpg`, width: 1536, height: 2048 },
   { title: "gentle blue", image: `${storageBase}/manus-storage/gentle_blue_c4240e1e.jpg`, width: 1536, height: 2048 },
-  { title: "park", image: `${storageBase}/manus-storage/park_f078a765.jpg`, width: 2048, height: 1536 },
+  { title: "park", image: `${storageBase}/manus-storage/park-corrected_2cc667e6.jpg`, width: 2048, height: 1465 },
   { title: "quiet", image: `${storageBase}/manus-storage/quiet_32b0c5d9.jpg`, width: 1648, height: 2048 },
   { title: "obsession", image: `${storageBase}/manus-storage/obsession_0b1a72f3.jpg`, width: 1644, height: 2048 },
 ];
